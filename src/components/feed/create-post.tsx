@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { createPost } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,7 +23,7 @@ function SubmitButton() {
 }
 
 export function CreatePost({ canPostToday }: { canPostToday: boolean }) {
-  const [state, formAction] = useFormState(createPost, null);
+  const [state, formAction] = useActionState(createPost, null);
   const [postType, setPostType] = useState<'text' | 'photo' | 'video'>('text');
   const formRef = useRef<HTMLFormElement>(null);
 

@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
 import { updateProfile } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,7 +30,7 @@ function SubmitButton() {
 }
 
 export function ProfileEditor({ user }: ProfileEditorProps) {
-  const [state, formAction] = useFormState(updateProfile, null);
+  const [state, formAction] = useActionState(updateProfile, null);
   const [avatarPreview, setAvatarPreview] = useState<string | null>(user.photoURL ?? null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
