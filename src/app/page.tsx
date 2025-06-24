@@ -33,7 +33,7 @@ export default function Home() {
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-headline text-primary-foreground tracking-tight mb-6">
-                Share your day, once a day.
+                Go Global
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-10">
                 Today is a new kind of social media. No endless scrolling, no
