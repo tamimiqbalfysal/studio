@@ -24,7 +24,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={cn('font-body antialiased min-h-screen bg-background')}>
+      <body className={cn('font-body antialiased min-h-screen bg-background')} suppressHydrationWarning={true}>
         <Providers>
           {children}
           <Toaster />
