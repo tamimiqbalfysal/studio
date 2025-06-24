@@ -37,9 +37,9 @@ export function SignupForm() {
            {!isFirebaseConfigured && (
             <Alert variant="destructive">
               <Terminal className="h-4 w-4" />
-              <AlertTitle>Firebase Not Configured</AlertTitle>
+              <AlertTitle>Action Required: Configure Local Firebase</AlertTitle>
               <AlertDescription>
-                Please configure your Firebase credentials to enable authentication. A valid secret code is `VALIDCODE` for testing.
+                Your local preview is not connected to Firebase. Please follow the instructions in the <strong>README.md</strong> file to set up your <code>.env.local</code> file. A valid secret code for testing is <code>VALIDCODE</code>.
               </AlertDescription>
             </Alert>
           )}

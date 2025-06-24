@@ -37,9 +37,9 @@ export function LoginForm() {
           {!isFirebaseConfigured && (
             <Alert variant="destructive">
               <Terminal className="h-4 w-4" />
-              <AlertTitle>Firebase Not Configured</AlertTitle>
+              <AlertTitle>Action Required: Configure Local Firebase</AlertTitle>
               <AlertDescription>
-                Please configure your Firebase credentials in a .env.local file to enable authentication.
+                Your local preview is not connected to Firebase. Please follow the instructions in the <strong>README.md</strong> file to create a <code>.env.local</code> file with your project credentials.
               </AlertDescription>
             </Alert>
           )}
